@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Exec=/usr/local/bin/setx
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=a_set_xsession
+Name=set_xsession
+Comment[en_US]=sets the xsession to xhost +local:
+Comment=sets the xsession to xhost +local:
+

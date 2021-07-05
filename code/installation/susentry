@@ -1,0 +1,27 @@
+#!/bin/bash
+
+exec 2> /dev/null
+sleep 3
+
+export DISPLAY=:1
+#xhost +local:
+#export DISPLAY=:1
+
+var1="success"
+var=$(/home/berns/2020-ca326-cberns-fileencryption-with-opencv/code/facial/pam_detect.py)
+
+exit_status=$? # This grabs the exit status of the python script we just ran
+if [ "${exit_status}" -ne 0 ]; # checks to see if exit status is anything other 
+then
+    echo "exit ${exit_status}"
+    exit $exit_status # exit status 1 on python script fail (exit 1)
+fi
+
+if [ "$var" == "$var1" ]; then
+	#echo "Authenticated"
+	exit 0
+else
+	#echo "Authentication Failure"
+	exit 1
+fi
+

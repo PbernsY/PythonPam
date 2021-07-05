@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=sudo /usr/local/bin/setpam
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=set_params
+Name=set_params
+Comment[en_US]=
+Comment= 
